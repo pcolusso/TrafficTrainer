@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		634F85B02000D24D0040C030 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634F85AF2000D24D0040C030 /* SQLite.framework */; };
+		634F85B22000D2590040C030 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 634F85B12000D2590040C030 /* Cartfile */; };
 		63A451E32000D0AD0069881D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A451E22000D0AD0069881D /* AppDelegate.swift */; };
 		63A451E52000D0AD0069881D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A451E42000D0AD0069881D /* ViewController.swift */; };
 		63A451E82000D0AD0069881D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A451E62000D0AD0069881D /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		634F85AF2000D24D0040C030 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
+		634F85B12000D2590040C030 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		63A451DF2000D0AD0069881D /* TrafficTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A451E22000D0AD0069881D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A451E42000D0AD0069881D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				634F85B02000D24D0040C030 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		634F85AE2000D24D0040C030 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				634F85AF2000D24D0040C030 /* SQLite.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		63A451D62000D0AD0069881D = {
 			isa = PBXGroup;
 			children = (
+				634F85B12000D2590040C030 /* Cartfile */,
 				63A451E12000D0AD0069881D /* TrafficTrainer */,
 				63A451E02000D0AD0069881D /* Products */,
+				634F85AE2000D24D0040C030 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +140,7 @@
 			files = (
 				63A451ED2000D0AD0069881D /* LaunchScreen.storyboard in Resources */,
 				63A451EA2000D0AD0069881D /* Assets.xcassets in Resources */,
+				634F85B22000D2590040C030 /* Cartfile in Resources */,
 				63A451E82000D0AD0069881D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,7 +291,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMCZBZDRGH;
+				DEVELOPMENT_TEAM = QPPS98ERPF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrafficTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pc.TrafficTrainer;
@@ -290,7 +310,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMCZBZDRGH;
+				DEVELOPMENT_TEAM = QPPS98ERPF;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = TrafficTrainer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = pc.TrafficTrainer;
