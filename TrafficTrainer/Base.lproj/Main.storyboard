@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="765" y="425"/>
         </scene>
-        <!--View Controller-->
+        <!--Record Controller-->
         <scene sceneID="5Ru-ED-LsX">
             <objects>
-                <viewController storyboardIdentifier="page1" id="C9g-0o-XD2" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="page1" id="C9g-0o-XD2" customClass="RecordController" customModule="TrafficTrainer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0R-Cq-pJR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                 <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="C9g-0o-XD2" eventType="touchUpInside" id="fj8-SV-GIe"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="day: working on it..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dkG-Az-X6f">
                                 <rect key="frame" x="16" y="327" width="343" height="21"/>
@@ -119,6 +122,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sty-Xm-vfM"/>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="fJ4-8x-72u" id="eYk-CB-Vsw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzm-iN-MdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
