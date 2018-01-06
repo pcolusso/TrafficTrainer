@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6343DCE42000DB5B007FD311 /* IntroPages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6343DCE32000DB5B007FD311 /* IntroPages.swift */; };
 		634F85B02000D24D0040C030 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634F85AF2000D24D0040C030 /* SQLite.framework */; };
 		634F85B22000D2590040C030 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 634F85B12000D2590040C030 /* Cartfile */; };
 		63A451E32000D0AD0069881D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A451E22000D0AD0069881D /* AppDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6343DCE32000DB5B007FD311 /* IntroPages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroPages.swift; sourceTree = "<group>"; };
 		634F85AF2000D24D0040C030 /* SQLite.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SQLite.framework; path = Carthage/Build/iOS/SQLite.framework; sourceTree = "<group>"; };
 		634F85B12000D2590040C030 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		63A451DF2000D0AD0069881D /* TrafficTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,6 +74,7 @@
 				63A451E22000D0AD0069881D /* AppDelegate.swift */,
 				63A451E42000D0AD0069881D /* ViewController.swift */,
 				63A451E62000D0AD0069881D /* Main.storyboard */,
+				6343DCE32000DB5B007FD311 /* IntroPages.swift */,
 				63A451E92000D0AD0069881D /* Assets.xcassets */,
 				63A451EB2000D0AD0069881D /* LaunchScreen.storyboard */,
 				63A451EE2000D0AD0069881D /* Info.plist */,
@@ -89,6 +92,7 @@
 				63A451DB2000D0AD0069881D /* Sources */,
 				63A451DC2000D0AD0069881D /* Frameworks */,
 				63A451DD2000D0AD0069881D /* Resources */,
+				6343DCE52000DC34007FD311 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -147,11 +151,30 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6343DCE52000DC34007FD311 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/SQLite.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SQLite.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		63A451DB2000D0AD0069881D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6343DCE42000DB5B007FD311 /* IntroPages.swift in Sources */,
 				63A451E52000D0AD0069881D /* ViewController.swift in Sources */,
 				63A451E32000D0AD0069881D /* AppDelegate.swift in Sources */,
 			);
