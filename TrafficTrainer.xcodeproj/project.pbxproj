@@ -11,6 +11,7 @@
 		634F85B02000D24D0040C030 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 634F85AF2000D24D0040C030 /* SQLite.framework */; };
 		634F85B22000D2590040C030 /* Cartfile in Resources */ = {isa = PBXBuildFile; fileRef = 634F85B12000D2590040C030 /* Cartfile */; };
 		635248CE2000EB0F008F83B7 /* RecordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635248CD2000EB0F008F83B7 /* RecordController.swift */; };
+		637F36F020018AE500248454 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637F36EF20018AE500248454 /* DataStore.swift */; };
 		63A451E32000D0AD0069881D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A451E22000D0AD0069881D /* AppDelegate.swift */; };
 		63A451E52000D0AD0069881D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A451E42000D0AD0069881D /* ViewController.swift */; };
 		63A451E82000D0AD0069881D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63A451E62000D0AD0069881D /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		634F85B12000D2590040C030 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
 		635248CC2000EA99008F83B7 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		635248CD2000EB0F008F83B7 /* RecordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordController.swift; sourceTree = "<group>"; };
+		637F36EF20018AE500248454 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		63A451DF2000D0AD0069881D /* TrafficTrainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrafficTrainer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63A451E22000D0AD0069881D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		63A451E42000D0AD0069881D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				63A451E22000D0AD0069881D /* AppDelegate.swift */,
 				63A451E42000D0AD0069881D /* ViewController.swift */,
 				63A451E62000D0AD0069881D /* Main.storyboard */,
+				637F36EF20018AE500248454 /* DataStore.swift */,
 				635248CD2000EB0F008F83B7 /* RecordController.swift */,
 				6343DCE32000DB5B007FD311 /* IntroPages.swift */,
 				63A451E92000D0AD0069881D /* Assets.xcassets */,
@@ -182,6 +185,7 @@
 				635248CE2000EB0F008F83B7 /* RecordController.swift in Sources */,
 				6343DCE42000DB5B007FD311 /* IntroPages.swift in Sources */,
 				63A451E52000D0AD0069881D /* ViewController.swift in Sources */,
+				637F36F020018AE500248454 /* DataStore.swift in Sources */,
 				63A451E32000D0AD0069881D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

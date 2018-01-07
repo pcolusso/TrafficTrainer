@@ -11,7 +11,30 @@ import UIKit
 class RecordController: UIViewController {
     
     @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var dayLabel: UILabel!
+    @IBOutlet var dateLabel: UILabel!
+    @IBOutlet var timeLabel: UILabel!
+    
     var recording = false
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        refreshData()
+    }
+    
+    func refreshData() {
+        let date = Date()
+        let calendar = Calendar.current
+        let weekday  = calendar.component(.weekday, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        
+        let days_of_week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        
+        dayLabel.text = "day: \(days_of_week[weekday - 1])"
+        dateLabel.text = "date: \(date.getMonthName()) \(day)"
+    }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         //flip states
@@ -35,4 +58,18 @@ extension UIColor {
         self.getRed(&r, green: &g, blue: &b, alpha: &a)
         return UIColor(red: (1 - r), green: (1 - g), blue: (1 - b), alpha: a) // Assuming you want the same alpha value.
     }
+}
+
+
+//take from https://stackoverflow.com/questions/43820798/how-can-i-get-current-month-as-string-in-swift
+extension Date {
+    
+    func getMonthName() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MMMM"
+        let strMonth = dateFormatter.string(from: self)
+        return strMonth
+    }
+    
+    
 }

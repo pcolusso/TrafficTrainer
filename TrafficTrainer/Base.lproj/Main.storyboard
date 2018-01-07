@@ -123,7 +123,10 @@
                         <viewLayoutGuide key="safeArea" id="Sty-Xm-vfM"/>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="12W-CJ-741" id="myJ-fb-eD9"/>
+                        <outlet property="dayLabel" destination="dkG-Az-X6f" id="fXM-dF-hFI"/>
                         <outlet property="statusLabel" destination="fJ4-8x-72u" id="eYk-CB-Vsw"/>
+                        <outlet property="timeLabel" destination="qfk-Aa-CQo" id="FOt-0a-pR6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bzm-iN-MdG" userLabel="First Responder" sceneMemberID="firstResponder"/>
