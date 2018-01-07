@@ -8,6 +8,8 @@
 
 import UIKit
 
+//test
+
 class RecordController: UIViewController {
     
     @IBOutlet var statusLabel: UILabel!
