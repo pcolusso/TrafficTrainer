@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreLocation
 
-//test
+//TODO: need to add permission via info.plist, see https://www.hackingwithswift.com/read/22/2/requesting-location-core-location
 
-class RecordController: UIViewController {
+class RecordController: UIViewController, CLLocationManagerDelegate {
     
     @IBOutlet var statusLabel: UILabel!
     @IBOutlet var dayLabel: UILabel!
@@ -18,11 +19,36 @@ class RecordController: UIViewController {
     @IBOutlet var timeLabel: UILabel!
     
     var recording = false
+    var timer = NSTimer?
+    var locationManager = CLLocationManager!
+
+    let formatter: DateFormatter = {
+        let tmpFormatter = DateFormatter()
+        tmpFormatter.dateFormat = "hh:mm:ss"
+        return tmpFormatter
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         refreshData()
+
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.requestWhenInUseAuthorization()
+        
+        timer = Timer.scheduledTimer(timeInterval: 60, target: self, selector: #selector(self.getTimeOfDate), userInfo: nil, repeats: true)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+    }
+
+    func getTimeOfDate() {
+        var curDate = Date()
+
+        timeLabel.text = formatter.string(from: curDate)
     }
     
     func refreshData() {
@@ -36,6 +62,16 @@ class RecordController: UIViewController {
         
         dayLabel.text = "day: \(days_of_week[weekday - 1])"
         dateLabel.text = "date: \(date.getMonthName()) \(day)"
+    }
+
+    func submitRecording() {
+        //prepare info to send to data layer.
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            //do what we need to do with location.
+        }
     }
     
     @IBAction func buttonPressed(_ sender: UIButton) {
